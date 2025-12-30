@@ -26,5 +26,4 @@ meta_X = np.vstack([cat_pred_prob, tft_pred]).T
 meta_model = LogisticRegression()
 meta_model.fit(meta_X, y_test)
 final_meta_pred = meta_model.predict(meta_X)
-
 print("Meta-Model Accuracy:", accuracy_score(y_test, final_meta_pred))
