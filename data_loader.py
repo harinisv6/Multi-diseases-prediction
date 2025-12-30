@@ -5,7 +5,6 @@ def load_tabular_data(path="data/medical_data.csv"):
     X = data.drop(columns=["disease_label"])
     y = data["disease_label"]
     return X, y
-
 def load_time_series_data(path="data/medical_time_series.csv"):
     df = pd.read_csv(path)
     df["time"] = df["time"].astype(int)
